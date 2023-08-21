@@ -16,6 +16,7 @@ namespace WebAPI
         public static string show(string args1)
         { 
             PhoneSystem ps = PhoneSystem.Root;
+            
             var extension = ps.GetDNByNumber(args1) as Extension;  
             Logger.WriteLine($"    CURRENT_STATUS={extension.CurrentProfile?.Name}");
             return($"    CURRENT_STATUS={extension.CurrentProfile?.Name}");
